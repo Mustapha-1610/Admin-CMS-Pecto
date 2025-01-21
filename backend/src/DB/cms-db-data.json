@@ -1,0 +1,1059 @@
+[
+  {
+    "wordFirstLang": "Привет!",
+    "sentenceFirstLang": "Привет, как дела?",
+    "wordSecondLang": "Hei!",
+    "sentenceSecondLang": "Hei, mitä kuuluu?",
+    "id": 1000
+  },
+  {
+    "wordFirstLang": "Добро пожаловать!",
+    "sentenceFirstLang": "Добро пожаловать в наш магазин!",
+    "wordSecondLang": "Tervetuloa!",
+    "sentenceSecondLang": "Tervetuloa kauppaamme!",
+    "id": 1001
+  },
+  {
+    "wordFirstLang": "Извините!",
+    "sentenceFirstLang": "Извините, где находится станция?",
+    "wordSecondLang": "Anteeksi!",
+    "sentenceSecondLang": "Anteeksi, missä on asema?",
+    "id": 1002
+  },
+  {
+    "wordFirstLang": "здесь",
+    "sentenceFirstLang": "Здесь много людей.",
+    "wordSecondLang": "täällä",
+    "sentenceSecondLang": "Täällä on paljon ihmisiä.",
+    "id": 1003
+  },
+  {
+    "wordFirstLang": "Кто ты?",
+    "sentenceFirstLang": "Привет, кто ты?",
+    "wordSecondLang": "Kuka sinä olet?",
+    "sentenceSecondLang": "Hei, kuka sinä olet?",
+    "id": 1004
+  },
+  {
+    "wordFirstLang": "я",
+    "sentenceFirstLang": "Я студент.",
+    "wordSecondLang": "minä",
+    "sentenceSecondLang": "Minä olen opiskelija.",
+    "id": 1005
+  },
+  {
+    "wordFirstLang": "быть",
+    "sentenceFirstLang": "Я дома.",
+    "wordSecondLang": "olla",
+    "sentenceSecondLang": "Minä olen kotona.",
+    "id": 1006
+  },
+  {
+    "wordFirstLang": "а ты?",
+    "sentenceFirstLang": "Я готов, а ты?",
+    "wordSecondLang": "entä sinä?",
+    "sentenceSecondLang": "Olen valmis, entä sinä?",
+    "id": 1007
+  },
+  {
+    "wordFirstLang": "ты",
+    "sentenceFirstLang": "Ты идешь сегодня в кино?",
+    "wordSecondLang": "sinä",
+    "sentenceSecondLang": "Menetkö sinä tänään elokuviin?",
+    "id": 1008
+  },
+  {
+    "wordFirstLang": "Приятно познакомиться!",
+    "sentenceFirstLang": "Приятно познакомиться, мое имя Анна.",
+    "wordSecondLang": "Hauska tutustua!",
+    "sentenceSecondLang": "Hauska tutustua, nimeni on Anna.",
+    "id": 1009
+  },
+  {
+    "wordFirstLang": "Как ты?",
+    "sentenceFirstLang": "Привет! Как ты?",
+    "wordSecondLang": "Mitä sinulle kuuluu?",
+    "sentenceSecondLang": "Hei! Mitä sinulle kuuluu?",
+    "id": 1010
+  },
+  {
+    "wordFirstLang": "учитель",
+    "sentenceFirstLang": "Она учитель в школе.",
+    "wordSecondLang": "opettaja",
+    "sentenceSecondLang": "Hän on opettaja koulussa.",
+    "id": 1011
+  },
+  {
+    "wordFirstLang": "прийти",
+    "sentenceFirstLang": "Когда ты придешь домой?",
+    "wordSecondLang": "tulla",
+    "sentenceSecondLang": "Milloin tulet kotiin?",
+    "id": 1012
+  },
+  {
+    "wordFirstLang": "Доброе утро!",
+    "sentenceFirstLang": "Доброе утро, как спалось?",
+    "wordSecondLang": "Huomenta!",
+    "sentenceSecondLang": "Huomenta, miten nukuit?",
+    "id": 1013
+  },
+  {
+    "wordFirstLang": "Как твоё имя?",
+    "sentenceFirstLang": "Привет, как твоё имя?",
+    "wordSecondLang": "Mikä sinun nimi on?",
+    "sentenceSecondLang": "Hei, mikä sinun nimesi on?",
+    "id": 1014
+  },
+  {
+    "wordFirstLang": "Моё имя...",
+    "sentenceFirstLang": "Моё имя Алексей.",
+    "wordSecondLang": "Minun nimi on...",
+    "sentenceSecondLang": "Minun nimeni on Aleksei.",
+    "id": 1015
+  },
+  {
+    "wordFirstLang": "Как это пишется?",
+    "sentenceFirstLang": "Как это пишется по-фински?",
+    "wordSecondLang": "Miten se kirjoitetaan?",
+    "sentenceSecondLang": "Miten se kirjoitetaan suomeksi?",
+    "id": 1016
+  },
+  {
+    "wordFirstLang": "имя",
+    "sentenceFirstLang": "Моё имя Наталья.",
+    "wordSecondLang": "etunimi",
+    "sentenceSecondLang": "Minun etunimeni on Natalia.",
+    "id": 1017
+  },
+  {
+    "wordFirstLang": "фамилия",
+    "sentenceFirstLang": "Моя фамилия Иванова.",
+    "wordSecondLang": "sukunimi",
+    "sentenceSecondLang": "Minun sukunimeni on Ivanova.",
+    "id": 1018
+  },
+  {
+    "wordFirstLang": "Добрый день!",
+    "sentenceFirstLang": "Добрый день! Как ваш день?",
+    "wordSecondLang": "Hyvää päivää!",
+    "sentenceSecondLang": "Hyvää päivää! Miten päiväsi sujuu?",
+    "id": 1019
+  },
+  {
+    "wordFirstLang": "Добрый вечер!",
+    "sentenceFirstLang": "Добрый вечер! Как дела?",
+    "wordSecondLang": "Hyvää iltaa!",
+    "sentenceSecondLang": "Hyvää iltaa! Mitä kuuluu?",
+    "id": 1020
+  },
+  {
+    "wordFirstLang": "Спокойной ночи! Спи крепко!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Hyvää yötä! Nuku hyvin!",
+    "sentenceSecondLang": "",
+    "id": 1021
+  },
+  {
+    "wordFirstLang": "Привет!",
+    "sentenceFirstLang": "Привет, как поживаешь?",
+    "wordSecondLang": "Moi!",
+    "sentenceSecondLang": "Moi, mitä kuuluu?",
+    "id": 1022
+  },
+  {
+    "wordFirstLang": "День добрый!",
+    "sentenceFirstLang": "День добрый, как ваш день?",
+    "wordSecondLang": "Päivää!",
+    "sentenceSecondLang": "Päivää, miten päiväsi sujuu?",
+    "id": 1023
+  },
+  {
+    "wordFirstLang": "Добрый вечер!",
+    "sentenceFirstLang": "Добрый вечер, что нового?",
+    "wordSecondLang": "Iltaa!",
+    "sentenceSecondLang": "Iltaa, mitä uutta?",
+    "id": 1024
+  },
+  {
+    "wordFirstLang": "А тебе?",
+    "sentenceFirstLang": "Я в порядке, а тебе как?",
+    "wordSecondLang": "Entä sinulle?",
+    "sentenceSecondLang": "Minä voin hyvin, entä sinulle?",
+    "id": 1025
+  },
+  {
+    "wordFirstLang": "Спасибо, вам тоже!",
+    "sentenceFirstLang": "Хороших выходных! Спасибо, вам тоже!",
+    "wordSecondLang": "Kiitos samoin!",
+    "sentenceSecondLang": "Hyvää viikonloppua! Kiitos samoin!",
+    "id": 1026
+  },
+  {
+    "wordFirstLang": "Пока!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Hei hei!",
+    "sentenceSecondLang": "",
+    "id": 1027
+  },
+  {
+    "wordFirstLang": "До свидания!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Näkemiin!",
+    "sentenceSecondLang": "",
+    "id": 1028
+  },
+  {
+    "wordFirstLang": "До завтра!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Nähdään huomenna!",
+    "sentenceSecondLang": "",
+    "id": 1029
+  },
+  {
+    "wordFirstLang": "Спасибо!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Kiitos!",
+    "sentenceSecondLang": "",
+    "id": 1030
+  },
+  {
+    "wordFirstLang": "Пожалуйста!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Ole hyvä!",
+    "sentenceSecondLang": "",
+    "id": 1031
+  },
+  {
+    "wordFirstLang": "Не за что!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Ei kestä!",
+    "sentenceSecondLang": "",
+    "id": 1032
+  },
+  {
+    "wordFirstLang": "Ничего страшного!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Ei se mitään!",
+    "sentenceSecondLang": "",
+    "id": 1033
+  },
+  {
+    "wordFirstLang": "Привет!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Terve!",
+    "sentenceSecondLang": "",
+    "id": 1034
+  },
+  {
+    "wordFirstLang": "До встречи!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Nähdään!",
+    "sentenceSecondLang": "",
+    "id": 1035
+  },
+  {
+    "wordFirstLang": "Пока!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Moi moi!",
+    "sentenceSecondLang": "",
+    "id": 1036
+  },
+  {
+    "wordFirstLang": "Привет!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Moikka!",
+    "sentenceSecondLang": "",
+    "id": 1037
+  },
+  {
+    "wordFirstLang": "Пока!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Heippa!",
+    "sentenceSecondLang": "",
+    "id": 1038
+  },
+  {
+    "wordFirstLang": "Да",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Joo",
+    "sentenceSecondLang": "",
+    "id": 1039
+  },
+  {
+    "wordFirstLang": "Нет",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Ei",
+    "sentenceSecondLang": "",
+    "id": 1040
+  },
+  {
+    "wordFirstLang": "Конечно",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Kyllä",
+    "sentenceSecondLang": "",
+    "id": 1041
+  },
+  {
+    "wordFirstLang": "понедельник",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "maanantai",
+    "sentenceSecondLang": "",
+    "id": 1042
+  },
+  {
+    "wordFirstLang": "вторник",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "tiistai",
+    "sentenceSecondLang": "",
+    "id": 1043
+  },
+  {
+    "wordFirstLang": "среда",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "keskiviikko",
+    "sentenceSecondLang": "",
+    "id": 1044
+  },
+  {
+    "wordFirstLang": "четверг",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "torstai",
+    "sentenceSecondLang": "",
+    "id": 1045
+  },
+  {
+    "wordFirstLang": "пятница",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "perjantai",
+    "sentenceSecondLang": "",
+    "id": 1046
+  },
+  {
+    "wordFirstLang": "суббота",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "lauantai",
+    "sentenceSecondLang": "",
+    "id": 1047
+  },
+  {
+    "wordFirstLang": "воскресенье",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "sunnuntai",
+    "sentenceSecondLang": "",
+    "id": 1048
+  },
+  {
+    "wordFirstLang": "выходные",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "viikonloppu",
+    "sentenceSecondLang": "",
+    "id": 1049
+  },
+  {
+    "wordFirstLang": "Хороших выходных!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Hauskaa viikonloppua!",
+    "sentenceSecondLang": "",
+    "id": 1050
+  },
+  {
+    "wordFirstLang": "Когда?",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Milloin?",
+    "sentenceSecondLang": "",
+    "id": 1051
+  },
+  {
+    "wordFirstLang": "в понедельник",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "maanantaina",
+    "sentenceSecondLang": "",
+    "id": 1052
+  },
+  {
+    "wordFirstLang": "во вторник",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "tiistaina",
+    "sentenceSecondLang": "",
+    "id": 1053
+  },
+  {
+    "wordFirstLang": "в среду",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "keskiviikkona",
+    "sentenceSecondLang": "",
+    "id": 1054
+  },
+  {
+    "wordFirstLang": "в четверг",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "torstaina",
+    "sentenceSecondLang": "",
+    "id": 1055
+  },
+  {
+    "wordFirstLang": "в пятницу",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "perjantaina",
+    "sentenceSecondLang": "",
+    "id": 1056
+  },
+  {
+    "wordFirstLang": "в субботу",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "lauantaina",
+    "sentenceSecondLang": "",
+    "id": 1057
+  },
+  {
+    "wordFirstLang": "в воскресенье",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "sunnuntaina",
+    "sentenceSecondLang": "",
+    "id": 1058
+  },
+  {
+    "wordFirstLang": "позавчера",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "toissapäivänä",
+    "sentenceSecondLang": "",
+    "id": 1059
+  },
+  {
+    "wordFirstLang": "вчера",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "eilen",
+    "sentenceSecondLang": "",
+    "id": 1060
+  },
+  {
+    "wordFirstLang": "сегодня",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "tänään",
+    "sentenceSecondLang": "",
+    "id": 1061
+  },
+  {
+    "wordFirstLang": "завтра",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "huomenna",
+    "sentenceSecondLang": "",
+    "id": 1062
+  },
+  {
+    "wordFirstLang": "послезавтра",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "ylihuomenna",
+    "sentenceSecondLang": "",
+    "id": 1063
+  },
+  {
+    "wordFirstLang": "ноль",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "nolla",
+    "sentenceSecondLang": "",
+    "id": 1064
+  },
+  {
+    "wordFirstLang": "один",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "yksi",
+    "sentenceSecondLang": "",
+    "id": 1065
+  },
+  {
+    "wordFirstLang": "два",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kaksi",
+    "sentenceSecondLang": "",
+    "id": 1066
+  },
+  {
+    "wordFirstLang": "три",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kolme",
+    "sentenceSecondLang": "",
+    "id": 1067
+  },
+  {
+    "wordFirstLang": "двадцать один",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kaksikymmentäyksi",
+    "sentenceSecondLang": "",
+    "id": 1068
+  },
+  {
+    "wordFirstLang": "сто",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "sata",
+    "sentenceSecondLang": "",
+    "id": 1069
+  },
+  {
+    "wordFirstLang": "двести",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kaksisataa",
+    "sentenceSecondLang": "",
+    "id": 1070
+  },
+  {
+    "wordFirstLang": "два миллиона",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kaksi miljoonaa",
+    "sentenceSecondLang": "",
+    "id": 1071
+  },
+  {
+    "wordFirstLang": "четыре",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "neljä",
+    "sentenceSecondLang": "",
+    "id": 1072
+  },
+  {
+    "wordFirstLang": "пять",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "viisi",
+    "sentenceSecondLang": "",
+    "id": 1073
+  },
+  {
+    "wordFirstLang": "шесть",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kuusi",
+    "sentenceSecondLang": "",
+    "id": 1074
+  },
+  {
+    "wordFirstLang": "семь",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "seitsemän",
+    "sentenceSecondLang": "",
+    "id": 1075
+  },
+  {
+    "wordFirstLang": "восемь",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kahdeksan",
+    "sentenceSecondLang": "",
+    "id": 1076
+  },
+  {
+    "wordFirstLang": "девять",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "yhdeksän",
+    "sentenceSecondLang": "",
+    "id": 1077
+  },
+  {
+    "wordFirstLang": "десять",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kymmenen",
+    "sentenceSecondLang": "",
+    "id": 1078
+  },
+  {
+    "wordFirstLang": "одиннадцать",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "yksitoista",
+    "sentenceSecondLang": "",
+    "id": 1079
+  },
+  {
+    "wordFirstLang": "двенадцать",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kaksitoista",
+    "sentenceSecondLang": "",
+    "id": 1080
+  },
+  {
+    "wordFirstLang": "тридцать",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kolmekymmentä",
+    "sentenceSecondLang": "",
+    "id": 1081
+  },
+  {
+    "wordFirstLang": "четырнадцать",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "neljätoista",
+    "sentenceSecondLang": "",
+    "id": 1082
+  },
+  {
+    "wordFirstLang": "пятнадцать",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "viisitoista",
+    "sentenceSecondLang": "",
+    "id": 1083
+  },
+  {
+    "wordFirstLang": "шестнадцать",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kuusitoista",
+    "sentenceSecondLang": "",
+    "id": 1084
+  },
+  {
+    "wordFirstLang": "семнадцать",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "seitsemäntoista",
+    "sentenceSecondLang": "",
+    "id": 1085
+  },
+  {
+    "wordFirstLang": "восемнадцать",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kahdeksantoista",
+    "sentenceSecondLang": "",
+    "id": 1086
+  },
+  {
+    "wordFirstLang": "девятнадцать",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "yhdeksäntoista",
+    "sentenceSecondLang": "",
+    "id": 1087
+  },
+  {
+    "wordFirstLang": "двадцать",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kaksikymmentä",
+    "sentenceSecondLang": "",
+    "id": 1088
+  },
+  {
+    "wordFirstLang": "сорок",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "neljäkymmentä",
+    "sentenceSecondLang": "",
+    "id": 1089
+  },
+  {
+    "wordFirstLang": "пятьдесят",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "viisikymmentä",
+    "sentenceSecondLang": "",
+    "id": 1090
+  },
+  {
+    "wordFirstLang": "шестьдесят",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kuusikymmentä",
+    "sentenceSecondLang": "",
+    "id": 1091
+  },
+  {
+    "wordFirstLang": "семьдесят",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "seitsemänkymmentä",
+    "sentenceSecondLang": "",
+    "id": 1092
+  },
+  {
+    "wordFirstLang": "восемьдесят",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kahdeksankymmentä",
+    "sentenceSecondLang": "",
+    "id": 1093
+  },
+  {
+    "wordFirstLang": "девяносто",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "yhdeksänkymmentä",
+    "sentenceSecondLang": "",
+    "id": 1094
+  },
+  {
+    "wordFirstLang": "сто один",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "satayksi",
+    "sentenceSecondLang": "",
+    "id": 1095
+  },
+  {
+    "wordFirstLang": "триста",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kolmesataa",
+    "sentenceSecondLang": "",
+    "id": 1096
+  },
+  {
+    "wordFirstLang": "тысяча",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "tuhat",
+    "sentenceSecondLang": "",
+    "id": 1097
+  },
+  {
+    "wordFirstLang": "две тысячи",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "kaksituhatta",
+    "sentenceSecondLang": "",
+    "id": 1098
+  },
+  {
+    "wordFirstLang": "пятьсот тысяч",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "viisisataatuhatta",
+    "sentenceSecondLang": "",
+    "id": 1099
+  },
+  {
+    "wordFirstLang": "один миллион",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "miljoona",
+    "sentenceSecondLang": "",
+    "id": 1100
+  },
+  {
+    "wordFirstLang": "и",
+    "sentenceFirstLang": "И где мой телефон?",
+    "wordSecondLang": "ja",
+    "sentenceSecondLang": "Ja missä puhelimeni on?",
+    "id": 1101
+  },
+  {
+    "wordFirstLang": "есть ли",
+    "sentenceFirstLang": "Есть ли у тебя время?",
+    "wordSecondLang": "onko",
+    "sentenceSecondLang": "Onko sinulla aikaa?",
+    "id": 1102
+  },
+  {
+    "wordFirstLang": "курс финского языка",
+    "sentenceFirstLang": "Я записался на курс финского языка.",
+    "wordSecondLang": "suomen kurssi",
+    "sentenceSecondLang": "Olen ilmoittautunut suomen kurssille.",
+    "id": 1103
+  },
+  {
+    "wordFirstLang": "это",
+    "sentenceFirstLang": "Это мой любимый ресторан.",
+    "wordSecondLang": "tämä",
+    "sentenceSecondLang": "Tämä on lempiravintolani.",
+    "id": 1104
+  },
+  {
+    "wordFirstLang": "свободный",
+    "sentenceFirstLang": "У меня есть свободное время вечером.",
+    "wordSecondLang": "vapaa",
+    "sentenceSecondLang": "Minulla on vapaata aikaa illalla.",
+    "id": 1105
+  },
+  {
+    "wordFirstLang": "место",
+    "sentenceFirstLang": "Здесь есть свободное место?",
+    "wordSecondLang": "paikka",
+    "sentenceSecondLang": "Onko tässä vapaata paikkaa?",
+    "id": 1106
+  },
+  {
+    "wordFirstLang": "приятный",
+    "sentenceFirstLang": "Это был очень приятный вечер.",
+    "wordSecondLang": "kiva",
+    "sentenceSecondLang": "Se oli hyvin kiva ilta.",
+    "id": 1107
+  },
+  {
+    "wordFirstLang": "кто",
+    "sentenceFirstLang": "Кто ты? - Я Ольга.",
+    "wordSecondLang": "kuka",
+    "sentenceSecondLang": "Kuka sinä olet? - Minä olen Olga.",
+    "id": 1108
+  },
+  {
+    "wordFirstLang": "здесь",
+    "sentenceFirstLang": "Здесь много интересных мест для посещения.",
+    "wordSecondLang": "tässä",
+    "sentenceSecondLang": "Tässä on paljon mielenkiintoisia paikkoja vierailla.",
+    "id": 1109
+  },
+  {
+    "wordFirstLang": "мой",
+    "sentenceFirstLang": "Это моя книга.",
+    "wordSecondLang": "minun",
+    "sentenceSecondLang": "Tämä on minun kirjani.",
+    "id": 1110
+  },
+  {
+    "wordFirstLang": "имя",
+    "sentenceFirstLang": "Как твоё имя?",
+    "wordSecondLang": "nimi",
+    "sentenceSecondLang": "Mikä sinun nimesi on?",
+    "id": 1111
+  },
+  {
+    "wordFirstLang": "ладно",
+    "sentenceFirstLang": "Ладно, я сделаю это.",
+    "wordSecondLang": "okei",
+    "sentenceSecondLang": "Okei, teen sen.",
+    "id": 1112
+  },
+  {
+    "wordFirstLang": "день курса, занятие",
+    "sentenceFirstLang": "Следующее занятие на курсе будет в ближайший вторник.",
+    "wordSecondLang": "kurssipäivä",
+    "sentenceSecondLang": "Seuraava kurssipäivä on ensi tiistaina.",
+    "id": 1113
+  },
+  {
+    "wordFirstLang": "я есть, я являюсь",
+    "sentenceFirstLang": "Я – программист.",
+    "wordSecondLang": "minä olen",
+    "sentenceSecondLang": "Minä olen ohjelmoija.",
+    "id": 1114
+  },
+  {
+    "wordFirstLang": "ты есть, ты являешься",
+    "sentenceFirstLang": "Ты – учитель",
+    "wordSecondLang": "sinä olet",
+    "sentenceSecondLang": "Sinä olet opettaja",
+    "id": 1115
+  },
+  {
+    "wordFirstLang": "он/она есть, он/она является",
+    "sentenceFirstLang": "Он – врач.",
+    "wordSecondLang": "hän on",
+    "sentenceSecondLang": "Hän on lääkäri.",
+    "id": 1116
+  },
+  {
+    "wordFirstLang": "это есть",
+    "sentenceFirstLang": "Это правда.",
+    "wordSecondLang": "se on",
+    "sentenceSecondLang": "Se on totta.",
+    "id": 1117
+  },
+  {
+    "wordFirstLang": "мы есть, мы являемся",
+    "sentenceFirstLang": "Мы – команда.",
+    "wordSecondLang": "me olemme",
+    "sentenceSecondLang": "Me olemme tiimi.",
+    "id": 1118
+  },
+  {
+    "wordFirstLang": "вы есть, вы являетесь",
+    "sentenceFirstLang": "Вы – эксперты.",
+    "wordSecondLang": "te olette",
+    "sentenceSecondLang": "Te olette asiantuntijoita.",
+    "id": 1119
+  },
+  {
+    "wordFirstLang": "они есть, они являются",
+    "sentenceFirstLang": "Они –  инженеры.",
+    "wordSecondLang": "he ovat",
+    "sentenceSecondLang": "He ovat insinöörejä.",
+    "id": 1120
+  },
+  {
+    "wordFirstLang": "они есть",
+    "sentenceFirstLang": "Где ключи? Они дома.",
+    "wordSecondLang": "ne ovat",
+    "sentenceSecondLang": "Missä ovat avaimet? Ne ovat kotona.",
+    "id": 1121
+  },
+  {
+    "wordFirstLang": "разговорный язык",
+    "sentenceFirstLang": "Я учу разговорный язык.",
+    "wordSecondLang": "puhekieli",
+    "sentenceSecondLang": "Opettelen puhekieltä.",
+    "id": 1122
+  },
+  {
+    "wordFirstLang": "я есть (неформ.)",
+    "sentenceFirstLang": "Я дома.",
+    "wordSecondLang": "mä oon",
+    "sentenceSecondLang": "Mä oon kotona.",
+    "id": 1123
+  },
+  {
+    "wordFirstLang": "ты есть (неформ.)",
+    "sentenceFirstLang": "Ты готов.",
+    "wordSecondLang": "sä oot",
+    "sentenceSecondLang": "Sä oot valmis.",
+    "id": 1124
+  },
+  {
+    "wordFirstLang": "мы есть (неформ.)",
+    "sentenceFirstLang": "Мы в кафе.",
+    "wordSecondLang": "me ollaan",
+    "sentenceSecondLang": "Me ollaan kahvilassa.",
+    "id": 1125
+  },
+  {
+    "wordFirstLang": "вы есть (неформ.)",
+    "sentenceFirstLang": "Вы хорошие друзья.",
+    "wordSecondLang": "te ootte",
+    "sentenceSecondLang": "Te ootte hyviä ystäviä.",
+    "id": 1126
+  },
+  {
+    "wordFirstLang": "они есть (неформ.)",
+    "sentenceFirstLang": "Они здесь.",
+    "wordSecondLang": "ne on",
+    "sentenceSecondLang": "Ne on täällä.",
+    "id": 1127
+  },
+  {
+    "wordFirstLang": "математика",
+    "sentenceFirstLang": "Я изучаю математику.",
+    "wordSecondLang": "matematiikka",
+    "sentenceSecondLang": "Opiskelen matematiikkaa.",
+    "id": 1128
+  },
+  {
+    "wordFirstLang": "история",
+    "sentenceFirstLang": "История – мой любимый предмет.",
+    "wordSecondLang": "historia",
+    "sentenceSecondLang": "Historia on lempiaineeni.",
+    "id": 1129
+  },
+  {
+    "wordFirstLang": "химия",
+    "sentenceFirstLang": "Химия сложная наука.",
+    "wordSecondLang": "kemia",
+    "sentenceSecondLang": "Kemia on vaikea tiede.",
+    "id": 1130
+  },
+  {
+    "wordFirstLang": "физика",
+    "sentenceFirstLang": "Физика интересует многих.",
+    "wordSecondLang": "fysiikka",
+    "sentenceSecondLang": "Fysiikka kiinnostaa monia.",
+    "id": 1131
+  },
+  {
+    "wordFirstLang": "биология",
+    "sentenceFirstLang": "Биология изучает живые организмы.",
+    "wordSecondLang": "biologia",
+    "sentenceSecondLang": "Biologia tutkii eläviä organismeja.",
+    "id": 1132
+  },
+  {
+    "wordFirstLang": "шведский язык",
+    "sentenceFirstLang": "Я учу шведский язык.",
+    "wordSecondLang": "ruotsi",
+    "sentenceSecondLang": "Opiskelen ruotsia.",
+    "id": 1133
+  },
+  {
+    "wordFirstLang": "физкультура",
+    "sentenceFirstLang": "Физкультура важна для здоровья.",
+    "wordSecondLang": "liikunta",
+    "sentenceSecondLang": "Liikunta on tärkeää terveydelle.",
+    "id": 1134
+  },
+  {
+    "wordFirstLang": "музыка",
+    "sentenceFirstLang": "Музыка приносит радость.",
+    "wordSecondLang": "musiikki",
+    "sentenceSecondLang": "Musiikki tuo iloa.",
+    "id": 1135
+  },
+  {
+    "wordFirstLang": "часы",
+    "sentenceFirstLang": "На стене висят часы.",
+    "wordSecondLang": "kello",
+    "sentenceSecondLang": "Seinällä on kello.",
+    "id": 1136
+  },
+  {
+    "wordFirstLang": "миллиард",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "miljardi",
+    "sentenceSecondLang": "",
+    "id": 1137
+  },
+  {
+    "wordFirstLang": "пять миллиардов",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "viisi miljardia",
+    "sentenceSecondLang": "",
+    "id": 1138
+  },
+  {
+    "wordFirstLang": "родной язык",
+    "sentenceFirstLang": "Мой родной язык – русский.",
+    "wordSecondLang": "äidinkieli",
+    "sentenceSecondLang": "Äidinkieleni on venäjä.",
+    "id": 1139
+  },
+  {
+    "wordFirstLang": "английский язык",
+    "sentenceFirstLang": "Я говорю по-английски.",
+    "wordSecondLang": "englanti",
+    "sentenceSecondLang": "Puhun englantia.",
+    "id": 1140
+  },
+  {
+    "wordFirstLang": "французский язык",
+    "sentenceFirstLang": "Французский язык красивый.",
+    "wordSecondLang": "ranska",
+    "sentenceSecondLang": "Ranska on kaunis kieli.",
+    "id": 1141
+  },
+  {
+    "wordFirstLang": "Как дела?",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Mitä kuuluu?",
+    "sentenceSecondLang": "",
+    "id": 1142
+  },
+  {
+    "wordFirstLang": "У меня всё хорошо.",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Minulle kuuluu hyvää.",
+    "sentenceSecondLang": "",
+    "id": 1143
+  },
+  {
+    "wordFirstLang": "Всё хорошо, спасибо.",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Ihan hyvää, kiitos.",
+    "sentenceSecondLang": "",
+    "id": 1144
+  },
+  {
+    "wordFirstLang": "Ваше здоровье!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Kippis!",
+    "sentenceSecondLang": "",
+    "id": 1145
+  },
+  {
+    "wordFirstLang": "За ваше здоровье! (выпьем)",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Skool!",
+    "sentenceSecondLang": "",
+    "id": 1146
+  },
+  {
+    "wordFirstLang": "Приятного аппетита!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Hyvää ruokahalua!",
+    "sentenceSecondLang": "",
+    "id": 1147
+  },
+  {
+    "wordFirstLang": "Спасибо за еду!",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Kiitos ruoasta!",
+    "sentenceSecondLang": "",
+    "id": 1148
+  },
+  {
+    "wordFirstLang": "Спасибо, было вкусно.",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Kiitos, oli hyvää.",
+    "sentenceSecondLang": "",
+    "id": 1149
+  },
+  {
+    "wordFirstLang": "Сколько тебе лет?",
+    "sentenceFirstLang": "",
+    "wordSecondLang": "Kuinka vanha sinä olet?",
+    "sentenceSecondLang": "",
+    "id": 1150
+  }
+]

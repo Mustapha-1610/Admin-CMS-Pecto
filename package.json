@@ -1,0 +1,17 @@
+{
+  "name": "admin-cms",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "nodemon": "^3.0.0"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7"
+  }
+}
