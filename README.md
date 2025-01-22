@@ -9,18 +9,34 @@ Key features include:
 - Backend API developed using Node.js and TypeScript.
 - Persistent storage using SQLite.
 
+## Features
+
+Admin CMS offers the following features :
+
+1. **Dashboard Overview**  
+   View all data at a glance on the main dashboard, making it easy to monitor and manage information.  
+   ![Main Page](https://firebasestorage.googleapis.com/v0/b/dar-seranity.appspot.com/o/MainPage.PNG?alt=media&token=7efe9e39-14b1-4279-bf6d-bbb3987f5e69)
+
+2. **Edit Modal**  
+   Update existing records with ease using the edit modal, designed for quick and efficient modifications.  
+   ![Edit Modal](https://firebasestorage.googleapis.com/v0/b/dar-seranity.appspot.com/o/EditInterface.PNG?alt=media&token=07c9360c-c267-46c3-933b-8b92f940c85e)
+
+3. **Recent Activity Logs**  
+   Keep track of all administrative actions with the activity log, providing a clear audit trail of changes made.  
+   ![Recent Activity](https://firebasestorage.googleapis.com/v0/b/dar-seranity.appspot.com/o/RecentActivity.PNG?alt=media&token=7573342d-3488-40bd-8553-663c454e946e)
+
 ## Setting Up the Project Locally
 
 Follow these steps to clone, install dependencies, and run the project.
 
-### Prerequisites
+## Prerequisites
 
 Ensure the following tools are installed on your system:
 
 - **Node.js** (v16 or higher) - [Download Node.js](https://nodejs.org/)
 - **SQLite3** (if not pre-installed, follow this guide: [Install SQLite3](https://www.sqlitetutorial.net/download-install-sqlite/))
 
-### Installation Steps
+## Installation Steps
 
 1. Clone the repository:
 
@@ -48,11 +64,9 @@ Ensure the following tools are installed on your system:
       npm run dev
    ```
 
-   ```
    > This will concurrently start the backend server on **http://localhost:5000** and the frontend server on **http://localhost:3000**.
-   ```
 
-### Additional Notes
+## Additional Notes
 
 - **Ports:** Ensure ports 3000 (frontend) and 5000 (backend) are not in use before starting the project.
 - **SQLite Database:** This project uses SQLite for persistent storage. If SQLite3 is not installed on your system, you can follow [this guide](https://www.sqlitetutorial.net/download-install-sqlite/) to install it.
