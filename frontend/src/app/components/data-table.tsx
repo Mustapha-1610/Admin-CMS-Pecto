@@ -34,11 +34,12 @@ export default function DataTable({
       <tbody>
         {tableData.map((item: any, index: number) => (
           <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
+            {/* Render each table row with the corresponding data */}
             <td className="px-6 py-5 text-base text-black">
-              {item.wordFirstLang}
+              {item.wordFirstLang || "No Word"}
             </td>
             <td className="px-6 py-5 text-base text-black">
-              {item.wordSecondLang}
+              {item.wordSecondLang || "No Word Translation"}
             </td>
             <td className="px-6 py-5 text-base text-black">
               {item.sentenceFirstLang || "No Example!"}
@@ -48,6 +49,7 @@ export default function DataTable({
             </td>
             <td className="px-6 py-5 text-base text-black">
               <div className="flex justify-center items-center gap-3">
+                {/* Edit button to open the modal and set the selected entry */}
                 <BiEdit
                   onClick={() => (
                     setShowEditModal(true),

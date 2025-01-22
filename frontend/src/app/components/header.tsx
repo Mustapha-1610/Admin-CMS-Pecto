@@ -3,7 +3,7 @@ import { useState } from "react";
 import RecentActivityModal from "./recent-activity-modal";
 
 export default function Header() {
-  const [showActivityModal, setShowActivityModal] = useState(false);
+  const [showActivityModal, setShowActivityModal] = useState(false); // State to control the visibility of the Recent Activity modal
 
   return (
     <>
@@ -11,6 +11,7 @@ export default function Header() {
         <div className="text-xl font-semibold text-gray-800">
           Content Management System
         </div>
+        {/* Button to open the Recent Activity modal */}
         <div
           className="flex gap-2 items-center px-4 py-2.5 text-base text-white bg-gray-700 rounded-lg cursor-pointer"
           onClick={() => setShowActivityModal(true)}
@@ -19,6 +20,7 @@ export default function Header() {
           <span>Recent Activity</span>
         </div>
       </div>
+      {/* Render the modal when showActivityModal is true */}
       {showActivityModal && (
         <RecentActivityModal setShowActivityModal={setShowActivityModal} />
       )}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+// Custom hook to fetch data from the API
 export const useFetchData = () => {
   const [data, setData] = useState<any[]>([]);
   const [fetchData, setFetchData] = useState<boolean>(true);
@@ -10,13 +11,14 @@ export const useFetchData = () => {
         method: "GET",
       });
       const result = await response.json();
-      if (result) setData(result);
+      if (result) setData(result); // Set fetched data to state
     };
+
     if (fetchData) {
       fetchDataFromAPI();
-      setFetchData(false);
+      setFetchData(false); // Prevent re-fetching once data is set
     }
-  }, [fetchData]);
+  }, [fetchData]); // Runs whenever `fetchData` changes
 
   return { data, setFetchData };
 };

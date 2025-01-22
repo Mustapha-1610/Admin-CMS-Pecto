@@ -14,7 +14,7 @@ app.use(
   })
 );
 
-// fetch all entries in words table
+// Fetch all words from the database
 app.get("/api/words", (req, res) => {
   db.all("SELECT * FROM words", [], (err, rows) => {
     if (err) {
@@ -25,6 +25,7 @@ app.get("/api/words", (req, res) => {
   });
 });
 
+// Update a word entry by ID
 app.put("/api/words/:id", (req, res) => {
   const { id } = req.params;
   const {
@@ -34,16 +35,16 @@ app.put("/api/words/:id", (req, res) => {
     sentenceSecondLang,
   } = req.body;
 
-  // Validate if entry exists in the database
+  // Check if the entry exists
   db.get("SELECT * FROM words WHERE id = ?", [id], (err, row) => {
     if (err) {
       return res.status(500).json({ error: "Database error." });
     }
     if (!row) {
-      return res.status(404).json({ error: "Entry Non Existant." });
+      return res.status(404).json({ error: "Entry does not exist." });
     }
 
-    // Prepare the update query
+    // Build the update query dynamically
     let query = "UPDATE words SET ";
     const params = [];
 
@@ -76,6 +77,7 @@ app.put("/api/words/:id", (req, res) => {
   });
 });
 
+// Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });

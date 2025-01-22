@@ -2,18 +2,21 @@ import sqlite3 from "sqlite3";
 import path from "path";
 import fs from "fs";
 
+// Define database file paths
 const dbPath = path.resolve(__dirname, "cms_database.db");
 const jsonFilePath = path.resolve(__dirname, "cms-db-data.json");
 
+// Initialize SQLite database connection
 const db = new sqlite3.Database(dbPath, (err) => {
   if (err) {
     console.error("Failed to connect to SQLite database:", err.message);
   } else {
     console.log("Connected to SQLite database.");
-    initializeDatabase();
+    initializeDatabase(); // Ensure table exists and load data if needed
   }
 });
 
+// Create the words table if it doesn't exist
 const initializeDatabase = () => {
   db.run(
     `
@@ -30,12 +33,13 @@ const initializeDatabase = () => {
         console.error("Error creating table:", err.message);
       } else {
         console.log('Table "words" is ready.');
-        checkAndLoadData();
+        checkAndLoadData(); // Load data if the table is empty
       }
     }
   );
 };
 
+// Check if data exists in the table and load it if empty
 const checkAndLoadData = () => {
   db.get("SELECT COUNT(*) AS count FROM words", (err, row: any) => {
     if (err) {
@@ -49,6 +53,7 @@ const checkAndLoadData = () => {
   });
 };
 
+// Load data into the table from the JSON file
 const loadData = () => {
   try {
     const rawData = fs.readFileSync(jsonFilePath, "utf-8");

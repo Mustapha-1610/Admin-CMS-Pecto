@@ -17,11 +17,13 @@ export interface EditEntryHook {
   editEntry: () => Promise<void>;
 }
 
+// Hook for handling editing logic for an entry
 export function useEditEntry(
   selectedEntry: FormData,
   setFetchData: (fetchData: boolean) => void,
   setShowEditModal: (show: boolean) => void
 ): EditEntryHook {
+  // State for the updated entry details
   const [updatedEntry, setUpdatedEntry] = useState<FormData>({
     id: selectedEntry.id,
     word: "",
@@ -29,16 +31,18 @@ export function useEditEntry(
     translated_example_sentence: "",
     translation: "",
   });
-
+  // State for error messages and loading status
   const [errMessage, setErrMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
   const { addActivity } = useRecentActivityStore();
 
+  // Function to submit the edited entry to the backend
   async function editEntry() {
     setLoading(true);
     setErrMessage("");
 
+    // Validation for missing fields and their respective translations
     if (
       updatedEntry.word === "" &&
       updatedEntry.example_sentence === "" &&
@@ -73,7 +77,7 @@ export function useEditEntry(
       return;
     }
 
-    // API Call
+    // Perform PUT request to update the entry on the backend
     try {
       const response = await fetch(
         `http://localhost:5000/api/words/${selectedEntry.id}`,
@@ -92,6 +96,7 @@ export function useEditEntry(
       );
 
       if (response.ok) {
+        // Update recent activities and refresh the data on success
         setFetchData(true);
         setShowEditModal(false);
 

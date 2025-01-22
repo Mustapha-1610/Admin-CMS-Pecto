@@ -3,10 +3,11 @@ import { useRecentActivityStore } from "../store/recentActivityStore";
 import { IoClose } from "react-icons/io5";
 
 interface Props {
-  setShowActivityModal: (showModal: boolean) => void;
+  setShowActivityModal: (showModal: boolean) => void; // Prop to control modal visibility
 }
+
 export default function RecentActivity({ setShowActivityModal }: Props) {
-  const { activities, clearActivities } = useRecentActivityStore();
+  const { activities, clearActivities } = useRecentActivityStore(); // Zustand store actions
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
@@ -17,12 +18,14 @@ export default function RecentActivity({ setShowActivityModal }: Props) {
             Recent Activity
           </h2>
           <div className="flex space-x-2">
+            {/* Clear all activities */}
             <button
               className="text-red-600 hover:text-red-800"
               onClick={clearActivities}
             >
               Clear All
             </button>
+            {/* Close the modal */}
             <button
               className="text-red-600 hover:text-red-800"
               onClick={() => setShowActivityModal(false)}
@@ -31,6 +34,7 @@ export default function RecentActivity({ setShowActivityModal }: Props) {
             </button>
           </div>
         </div>
+        {/* Display no activity message or list of activities */}
         {activities.length === 0 ? (
           <div className="text-center text-gray-600">
             <FaRegClock size={32} className="mx-auto mb-2" />
@@ -38,6 +42,7 @@ export default function RecentActivity({ setShowActivityModal }: Props) {
           </div>
         ) : (
           <div className="space-y-4">
+            {/* Group activities by entry ID and display them */}
             {Object.entries(
               activities.reduce((acc, entry) => {
                 acc[entry.id] = acc[entry.id] || [];
@@ -53,7 +58,8 @@ export default function RecentActivity({ setShowActivityModal }: Props) {
                   Entry ID: {id}
                 </div>
                 <ul className="mt-2 space-y-2">
-                  {activities.map((activity, index) => (
+                  {/* List each activity */}
+                  {activities.reverse().map((activity, index) => (
                     <li key={index} className="text-sm text-gray-700">
                       <span className="font-medium text-blue-600">
                         {activity.field}:
