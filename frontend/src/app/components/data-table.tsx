@@ -1,5 +1,5 @@
 import { BiEdit } from "react-icons/bi";
-import { FormData } from "./edit-entry-modal";
+import { FormData } from "../hooks/useEditEntry";
 interface Props {
   tableData: any;
   setShowEditModal: (show: boolean) => void;

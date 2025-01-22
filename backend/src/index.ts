@@ -25,7 +25,6 @@ app.get("/api/words", (req, res) => {
   });
 });
 
-// edit entry in words table
 app.put("/api/words/:id", (req, res) => {
   const { id } = req.params;
   const {
@@ -34,39 +33,46 @@ app.put("/api/words/:id", (req, res) => {
     sentenceFirstLang,
     sentenceSecondLang,
   } = req.body;
-  // Base query and parameters
-  let query = "UPDATE words SET ";
-  const params: any[] = [];
 
-  // Add fields to update only if they are not empty or null
-  if (wordFirstLang && wordFirstLang !== "") {
-    query += "wordFirstLang = ?, ";
-    params.push(wordFirstLang);
-  }
-  if (sentenceFirstLang && sentenceFirstLang !== "") {
-    query += "sentenceFirstLang = ?, ";
-    params.push(sentenceFirstLang);
-  }
-  if (wordSecondLang && wordSecondLang !== "") {
-    query += "wordSecondLang = ?, ";
-    params.push(wordSecondLang);
-  }
-  if (sentenceSecondLang && sentenceSecondLang !== "") {
-    query += "sentenceSecondLang = ?, ";
-    params.push(sentenceSecondLang);
-  }
-
-  query = query.slice(0, -2) + " WHERE id = ?";
-  params.push(id);
-
-  db.run(query, params, function (err) {
+  // Validate if entry exists in the database
+  db.get("SELECT * FROM words WHERE id = ?", [id], (err, row) => {
     if (err) {
-      res.status(500).json({ error: err.message });
-    } else {
-      res.json({
-        message: "Word updated successfully!",
-      });
+      return res.status(500).json({ error: "Database error." });
     }
+    if (!row) {
+      return res.status(404).json({ error: "Entry Non Existant." });
+    }
+
+    // Prepare the update query
+    let query = "UPDATE words SET ";
+    const params = [];
+
+    if (wordFirstLang) {
+      query += "wordFirstLang = ?, ";
+      params.push(wordFirstLang);
+    }
+    if (sentenceFirstLang) {
+      query += "sentenceFirstLang = ?, ";
+      params.push(sentenceFirstLang);
+    }
+    if (wordSecondLang) {
+      query += "wordSecondLang = ?, ";
+      params.push(wordSecondLang);
+    }
+    if (sentenceSecondLang) {
+      query += "sentenceSecondLang = ?, ";
+      params.push(sentenceSecondLang);
+    }
+
+    query = query.slice(0, -2) + " WHERE id = ?";
+    params.push(id);
+
+    db.run(query, params, function (err) {
+      if (err) {
+        return res.status(500).json({ error: "Failed to update the word." });
+      }
+      res.json({ message: "Word updated successfully!" });
+    });
   });
 });
 

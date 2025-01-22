@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import EditEntryModal, { FormData } from "./components/edit-entry-modal";
+import EditEntryModal from "./components/edit-entry-modal";
 import DataTable from "./components/data-table";
 import { useFetchData } from "./hooks/useFetchData";
 import { useFilterData } from "./hooks/useFilterData";
@@ -8,6 +8,7 @@ import { usePagination } from "./hooks/usePagination";
 import Header from "./components/header";
 import FilterInput from "./components/filter-input";
 import TableControls from "./components/table-controls";
+import { FormData } from "./hooks/useEditEntry";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
