@@ -13,6 +13,8 @@ app.use(
     methods: ["GET", "POST", "DELETE", "PUT"],
   })
 );
+
+// fetch all entries in words table
 app.get("/api/words", (req, res) => {
   db.all("SELECT * FROM words", [], (err, rows) => {
     if (err) {
@@ -23,6 +25,7 @@ app.get("/api/words", (req, res) => {
   });
 });
 
+// edit entry in words table
 app.put("/api/words/:id", (req, res) => {
   const { id } = req.params;
   const {
@@ -31,13 +34,6 @@ app.put("/api/words/:id", (req, res) => {
     sentenceFirstLang,
     sentenceSecondLang,
   } = req.body;
-
-  console.log(
-    wordFirstLang,
-    wordSecondLang,
-    sentenceFirstLang,
-    sentenceSecondLang
-  );
   // Base query and parameters
   let query = "UPDATE words SET ";
   const params: any[] = [];
@@ -60,11 +56,9 @@ app.put("/api/words/:id", (req, res) => {
     params.push(sentenceSecondLang);
   }
 
-  // Remove trailing comma and add WHERE clause
   query = query.slice(0, -2) + " WHERE id = ?";
   params.push(id);
 
-  // Execute the query
   db.run(query, params, function (err) {
     if (err) {
       res.status(500).json({ error: err.message });

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 interface Props {
   setShowEditModal: (show: boolean) => void;
-  currentData: FormData;
+  selectedEntry: FormData;
   setFetchData: (fetchData: boolean) => void;
 }
 export interface FormData {
@@ -15,11 +15,11 @@ export interface FormData {
 
 export default function EditEntryModal({
   setShowEditModal,
-  currentData,
+  selectedEntry,
   setFetchData,
 }: Props) {
-  const [formData, setFormData] = useState<FormData>({
-    id: currentData.id,
+  const [updatedEntry, setUpdatedEntry] = useState<FormData>({
+    id: selectedEntry.id,
     word: "",
     example_sentence: "",
     translated_example_sentence: "",
@@ -32,39 +32,41 @@ export default function EditEntryModal({
     errMessage && setErrMessage("");
 
     if (
-      formData.word === "" &&
-      formData.example_sentence === "" &&
-      formData.translated_example_sentence === "" &&
-      formData.translation === ""
+      updatedEntry.word === "" &&
+      updatedEntry.example_sentence === "" &&
+      updatedEntry.translated_example_sentence === "" &&
+      updatedEntry.translation === ""
     ) {
       setShowEditModal(false);
     } else if (
-      (formData.word && !formData.translation) ||
-      (!formData.word && formData.translation)
+      (updatedEntry.word && !updatedEntry.translation) ||
+      (!updatedEntry.word && updatedEntry.translation)
     ) {
       setErrMessage(
         "Cannot edit word without its translation or original meaning"
       );
     } else if (
-      (formData.example_sentence && !formData.translated_example_sentence) ||
-      (!formData.example_sentence && formData.translated_example_sentence)
+      (updatedEntry.example_sentence &&
+        !updatedEntry.translated_example_sentence) ||
+      (!updatedEntry.example_sentence &&
+        updatedEntry.translated_example_sentence)
     )
       setErrMessage(
         "Cannot edit example without its translation or original meaning"
       );
     else {
       const response = await fetch(
-        `http://localhost:5000/api/words/${currentData.id}`,
+        `http://localhost:5000/api/words/${selectedEntry.id}`,
         {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            wordFirstLang: formData.word,
-            sentenceFirstLang: formData.example_sentence,
-            wordSecondLang: formData.translation,
-            sentenceSecondLang: formData.translated_example_sentence,
+            wordFirstLang: updatedEntry.word,
+            sentenceFirstLang: updatedEntry.example_sentence,
+            wordSecondLang: updatedEntry.translation,
+            sentenceSecondLang: updatedEntry.translated_example_sentence,
           }),
         }
       );
@@ -85,9 +87,9 @@ export default function EditEntryModal({
             <input
               type="text"
               className="w-full px-3 py-2 text-base bg-gray-50 text-gray-800 border border-solid rounded-lg"
-              placeholder={currentData.word || "Enter word"}
+              placeholder={selectedEntry.word || "Enter word"}
               onChange={(e) => {
-                setFormData({ ...formData, word: e.target.value });
+                setUpdatedEntry({ ...updatedEntry, word: e.target.value });
               }}
             />
           </div>
@@ -98,9 +100,12 @@ export default function EditEntryModal({
             <input
               type="text"
               className="w-full px-3 py-2 text-base bg-gray-50 text-gray-800 border border-solid rounded-lg"
-              placeholder={currentData.translation || "Enter translation"}
+              placeholder={selectedEntry.translation || "Enter translation"}
               onChange={(e) => {
-                setFormData({ ...formData, translation: e.target.value });
+                setUpdatedEntry({
+                  ...updatedEntry,
+                  translation: e.target.value,
+                });
               }}
             />
           </div>
@@ -112,10 +117,13 @@ export default function EditEntryModal({
               type="text"
               className="w-full px-3 py-2 text-base bg-gray-50 text-gray-800 border border-solid rounded-lg"
               placeholder={
-                currentData.example_sentence || "Enter example sentence"
+                selectedEntry.example_sentence || "Enter example sentence"
               }
               onChange={(e) => {
-                setFormData({ ...formData, example_sentence: e.target.value });
+                setUpdatedEntry({
+                  ...updatedEntry,
+                  example_sentence: e.target.value,
+                });
               }}
             />
           </div>
@@ -127,12 +135,12 @@ export default function EditEntryModal({
               type="text"
               className="w-full px-3 py-2 text-base bg-gray-50 text-gray-800 border border-solid rounded-lg"
               placeholder={
-                currentData.translated_example_sentence ||
+                selectedEntry.translated_example_sentence ||
                 "Enter translated example sentence"
               }
               onChange={(e) => {
-                setFormData({
-                  ...formData,
+                setUpdatedEntry({
+                  ...updatedEntry,
                   translated_example_sentence: e.target.value,
                 });
               }}

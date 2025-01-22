@@ -1,14 +1,14 @@
 import { BiEdit } from "react-icons/bi";
 import { FormData } from "./edit-entry-modal";
 interface Props {
-  currentData: any;
+  tableData: any;
   setShowEditModal: (show: boolean) => void;
-  setCurrentFormData: (data: FormData) => void;
+  setSelectedEntry: (data: FormData) => void;
 }
 export default function DataTable({
-  currentData,
+  tableData,
   setShowEditModal,
-  setCurrentFormData,
+  setSelectedEntry,
 }: Props) {
   return (
     <table className="w-full border-collapse bg-white">
@@ -32,7 +32,7 @@ export default function DataTable({
         </tr>
       </thead>
       <tbody>
-        {currentData.map((item: any, index: number) => (
+        {tableData.map((item: any, index: number) => (
           <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
             <td className="px-6 py-5 text-base text-black">
               {item.wordFirstLang}
@@ -51,7 +51,7 @@ export default function DataTable({
                 <BiEdit
                   onClick={() => (
                     setShowEditModal(true),
-                    setCurrentFormData({
+                    setSelectedEntry({
                       word: item.wordFirstLang,
                       example_sentence: item.sentenceFirstLang,
                       translated_example_sentence: item.sentenceSecondLang,

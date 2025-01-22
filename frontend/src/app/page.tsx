@@ -12,7 +12,7 @@ import TableControls from "./components/table-controls";
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [showEditModal, setShowEditModal] = useState<boolean>(false);
-  const [currentFormData, setCurrentFormData] = useState<FormData>({
+  const [selectedEntry, setSelectedEntry] = useState<FormData>({
     id: null,
     word: null,
     example_sentence: null,
@@ -38,8 +38,8 @@ export default function Home() {
           <FilterInput searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
           <div className="overflow-hidden bg-white rounded-lg shadow-sm mb-4">
             <DataTable
-              currentData={currentData}
-              setCurrentFormData={setCurrentFormData}
+              tableData={currentData}
+              setSelectedEntry={setSelectedEntry}
               setShowEditModal={setShowEditModal}
             />
             <TableControls
@@ -54,7 +54,7 @@ export default function Home() {
       </div>
       {showEditModal && (
         <EditEntryModal
-          currentData={currentFormData}
+          selectedEntry={selectedEntry}
           setShowEditModal={setShowEditModal}
           setFetchData={setFetchData}
         />
