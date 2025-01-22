@@ -3,15 +3,18 @@ import { useEffect, useState } from "react";
 import { BiEdit } from "react-icons/bi";
 import { FaFileSignature } from "react-icons/fa6";
 import {
-  MdOutlineDeleteForever,
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
+import EditEntryModal, { FormData } from "./components/edit-entry-modal";
 
 export default function Home() {
   const [data, setData] = useState<any[]>([]);
+  const [filteredData, setFilteredData] = useState<any[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchTerm, setSearchTerm] = useState("");
   const itemsPerPage = 10;
+  const [fetchData, setFetchData] = useState<boolean>(true);
 
   useEffect(() => {
     async function fetchWords() {
@@ -19,13 +22,31 @@ export default function Home() {
         method: "GET",
       });
       const res = await response.json();
-      if (res) setData(res);
+      if (res) {
+        setData(res);
+        setFilteredData(res);
+      }
     }
-    fetchWords();
-  }, []);
+    fetchData && (fetchWords(), setFetchData(false));
+  }, [fetchData]);
 
-  const totalPages = Math.ceil(data.length / itemsPerPage);
-  const currentData = data.slice(
+  useEffect(() => {
+    const lowercasedTerm = searchTerm.toLowerCase();
+    const filtered = data.filter(
+      (item) =>
+        item.wordFirstLang.toLowerCase().includes(lowercasedTerm) ||
+        item.wordSecondLang.toLowerCase().includes(lowercasedTerm) ||
+        (item.sentenceFirstLang &&
+          item.sentenceFirstLang.toLowerCase().includes(lowercasedTerm)) ||
+        (item.sentenceSecondLang &&
+          item.sentenceSecondLang.toLowerCase().includes(lowercasedTerm))
+    );
+    setFilteredData(filtered);
+    setCurrentPage(1);
+  }, [searchTerm, data]);
+
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  const currentData = filteredData.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
@@ -37,6 +58,15 @@ export default function Home() {
   const handlePrevPage = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
+
+  const [showEditModal, setShowEditModal] = useState<boolean>(false);
+  const [currentFormData, setCurrentFormData] = useState<FormData>({
+    id: null,
+    word: null,
+    example_sentence: null,
+    translated_example_sentence: null,
+    translation: null,
+  });
 
   return (
     <div className={`bg-white text-black`}>
@@ -56,6 +86,8 @@ export default function Home() {
               <input
                 type="text"
                 placeholder="Search words or phrases..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 className="py-3 pl-4 w-full text-base bg-gray-50 text-gray-800 border border-solid rounded-lg"
               />
             </div>
@@ -65,7 +97,7 @@ export default function Home() {
               <thead>
                 <tr>
                   <th className="px-6 py-3.5 text-xs font-medium text-left text-gray-500 border-b border-gray-300">
-                    Word/Phrase
+                    Word
                   </th>
                   <th className="px-6 py-3.5 text-xs font-medium text-left text-gray-500 border-b border-gray-300">
                     Translation
@@ -102,12 +134,19 @@ export default function Home() {
                     <td className="px-6 py-5 text-base text-black">
                       <div className="flex justify-center items-center gap-3">
                         <BiEdit
+                          onClick={() => (
+                            setShowEditModal(true),
+                            setCurrentFormData({
+                              word: item.wordFirstLang,
+                              example_sentence: item.sentenceFirstLang,
+                              translated_example_sentence:
+                                item.sentenceSecondLang,
+                              translation: item.wordSecondLang,
+                              id: Number(item.id),
+                            })
+                          )}
                           size={26}
                           className="text-indigo-600 cursor-pointer"
-                        />
-                        <MdOutlineDeleteForever
-                          size={28}
-                          className="text-red-600 cursor-pointer"
                         />
                       </div>
                     </td>
@@ -118,8 +157,8 @@ export default function Home() {
             <div className="flex justify-between items-center px-6 py-3.5 bg-white border-t border-gray-300 max-sm:flex-col max-sm:gap-4">
               <div className="text-sm text-gray-700">
                 Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}
-                {Math.min(currentPage * itemsPerPage, data.length)} of{" "}
-                {data.length} results
+                {Math.min(currentPage * itemsPerPage, filteredData.length)} of{" "}
+                {filteredData.length} results
               </div>
               <div className="flex items-center gap-2">
                 <MdOutlineKeyboardArrowLeft
@@ -144,6 +183,13 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {showEditModal && (
+        <EditEntryModal
+          currentData={currentFormData}
+          setShowEditModal={setShowEditModal}
+          setFetchData={setFetchData}
+        />
+      )}
     </div>
   );
 }

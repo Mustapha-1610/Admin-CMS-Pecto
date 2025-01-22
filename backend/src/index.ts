@@ -5,22 +5,16 @@ import cors from "cors";
 const app = express();
 const PORT = 5000;
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     origin: ["http://localhost:3000"],
     methods: ["GET", "POST", "DELETE", "PUT"],
   })
 );
-
-app.use(express.json());
-
 app.get("/api/words", (req, res) => {
-  const { search } = req.query;
-  const query = search
-    ? `SELECT * FROM words WHERE word LIKE ? OR translation LIKE ?`
-    : `SELECT * FROM words`;
-  const params = search ? [`%${search}%`, `%${search}%`] : [];
-  db.all(query, params, (err, rows) => {
+  db.all("SELECT * FROM words", [], (err, rows) => {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {
@@ -31,21 +25,52 @@ app.get("/api/words", (req, res) => {
 
 app.put("/api/words/:id", (req, res) => {
   const { id } = req.params;
-  const { word, translation, example_sentence } = req.body;
+  const {
+    wordFirstLang,
+    wordSecondLang,
+    sentenceFirstLang,
+    sentenceSecondLang,
+  } = req.body;
 
-  const query = `
-        UPDATE words
-        SET word = ?, translation = ?, example_sentence = ?
-        WHERE id = ?
-    `;
+  console.log(
+    wordFirstLang,
+    wordSecondLang,
+    sentenceFirstLang,
+    sentenceSecondLang
+  );
+  // Base query and parameters
+  let query = "UPDATE words SET ";
+  const params: any[] = [];
 
-  db.run(query, [word, translation, example_sentence, id], function (err) {
+  // Add fields to update only if they are not empty or null
+  if (wordFirstLang && wordFirstLang !== "") {
+    query += "wordFirstLang = ?, ";
+    params.push(wordFirstLang);
+  }
+  if (sentenceFirstLang && sentenceFirstLang !== "") {
+    query += "sentenceFirstLang = ?, ";
+    params.push(sentenceFirstLang);
+  }
+  if (wordSecondLang && wordSecondLang !== "") {
+    query += "wordSecondLang = ?, ";
+    params.push(wordSecondLang);
+  }
+  if (sentenceSecondLang && sentenceSecondLang !== "") {
+    query += "sentenceSecondLang = ?, ";
+    params.push(sentenceSecondLang);
+  }
+
+  // Remove trailing comma and add WHERE clause
+  query = query.slice(0, -2) + " WHERE id = ?";
+  params.push(id);
+
+  // Execute the query
+  db.run(query, params, function (err) {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {
       res.json({
         message: "Word updated successfully!",
-        changes: this.changes,
       });
     }
   });
