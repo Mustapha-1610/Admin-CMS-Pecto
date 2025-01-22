@@ -37,17 +37,20 @@ Ensure the following tools are installed on your system:
 
 3. Install dependencies for the root, frontend, and backend:
    ```bash
-      npm install
-        cd frontend && npm install
-        cd ../backend && npm install
-               cd ..
+    npm install
+    cd frontend then npm install
+    cd ../backend then npm install
+    cd ..
    ```
 4. Start the development servers:
-   ````bash
+
+   ```bash
       npm run dev
-     ```
+   ```
+
+   ```
    > This will concurrently start the backend server on **http://localhost:5000** and the frontend server on **http://localhost:3000**.
-   ````
+   ```
 
 ### Additional Notes
 
