@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRecentActivityStore } from "../store/recentActivityStore";
 
 export interface FormData {
   id: number | null;
@@ -32,11 +33,12 @@ export function useEditEntry(
   const [errMessage, setErrMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const { addActivity } = useRecentActivityStore();
+
   async function editEntry() {
     setLoading(true);
     setErrMessage("");
 
-    // Validation logic
     if (
       updatedEntry.word === "" &&
       updatedEntry.example_sentence === "" &&
@@ -92,6 +94,49 @@ export function useEditEntry(
       if (response.ok) {
         setFetchData(true);
         setShowEditModal(false);
+
+        if (updatedEntry.word && selectedEntry.word !== updatedEntry.word) {
+          addActivity({
+            id: selectedEntry.id!,
+            field: "Word",
+            oldValue: selectedEntry.word,
+            newValue: updatedEntry.word,
+          });
+        }
+        if (
+          updatedEntry.translation &&
+          selectedEntry.translation !== updatedEntry.translation
+        ) {
+          addActivity({
+            id: selectedEntry.id!,
+            field: "Translation",
+            oldValue: selectedEntry.translation,
+            newValue: updatedEntry.translation,
+          });
+        }
+        if (
+          updatedEntry.example_sentence &&
+          selectedEntry.example_sentence !== updatedEntry.example_sentence
+        ) {
+          addActivity({
+            id: selectedEntry.id!,
+            field: "Example Sentence",
+            oldValue: selectedEntry.example_sentence,
+            newValue: updatedEntry.example_sentence,
+          });
+        }
+        if (
+          updatedEntry.translated_example_sentence &&
+          selectedEntry.translated_example_sentence !==
+            updatedEntry.translated_example_sentence
+        ) {
+          addActivity({
+            id: selectedEntry.id!,
+            field: "Translated Example Sentence",
+            oldValue: selectedEntry.translated_example_sentence,
+            newValue: updatedEntry.translated_example_sentence,
+          });
+        }
       } else {
         const errorData = await response.json();
         setErrMessage(errorData.error || "Failed to update entry.");
