@@ -1,1 +1,5 @@
 node_modules
+cms_database
+cms_database.db
+
+backend\src\DB\cms_database.db
