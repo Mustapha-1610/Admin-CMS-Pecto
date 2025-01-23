@@ -53,30 +53,6 @@ export function useEditEntry(
       return;
     }
 
-    if (
-      (updatedEntry.word && !updatedEntry.translation) ||
-      (!updatedEntry.word && updatedEntry.translation)
-    ) {
-      setErrMessage(
-        "Cannot edit word without its translation or original meaning."
-      );
-      setLoading(false);
-      return;
-    }
-
-    if (
-      (updatedEntry.example_sentence &&
-        !updatedEntry.translated_example_sentence) ||
-      (!updatedEntry.example_sentence &&
-        updatedEntry.translated_example_sentence)
-    ) {
-      setErrMessage(
-        "Cannot edit example without its translation or original meaning."
-      );
-      setLoading(false);
-      return;
-    }
-
     // Perform PUT request to update the entry on the backend
     try {
       const response = await fetch(
